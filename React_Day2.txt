@@ -1,0 +1,160 @@
+  
+
+      ////////////////////////////////////-------------React js interview questions (09-01-2025)------///////////////////////////
+
+Q1.What is React?
+Q2.What are the limitations of React? 
+Q3.What is useState() in React?
+Q4.What is JSX?
+Q5.What are the differences between functional and class components?
+Q6.What is the use of useEffect React Hooks?
+Q7.What is the virtual DOM? How does react use the virtual DOM to render the UI?
+
+
+
+////------------------------------Solutions ----------------------------------------------------------//
+
+
+Q1.What is React?
+
+Ans: React, also known as ReactJS, is a popular and powerful JavaScript library used for building dynamic and interactive user interfaces, primarily for single-page applications (SPAs). 
+It was developed and maintained by Facebook and has gained significant popularity due to its efficient rendering techniques, reusable components, and active community support.
+
+React is a JavaScript library for building user interfaces (UIs) on the web. 
+React is a declarative, component based library that allows developers to build reusable UI components and It follows the Virtual DOM (Document Object Model) approach, which optimizes rendering performance by minimizing DOM updates. 
+React is fast and works well with other tools and libraries. 
+
+
+
+
+<!-- import React, { useState } from 'react';
+
+function Counter() {
+  // Declare a state variable called 'count' and a function to update it
+  const [count, setCount] = useState(0);
+
+  return (
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      <h1>Counter: {count}</h1>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <button onClick={() => setCount(count - 1)}>Decrement</button>
+      <button onClick={() => setCount(0)}>Reset</button>
+    </div>
+  );
+}
+
+export default Counter; -->
+
+<!-- import React from 'react';
+import Counter from './Counter';
+
+function App() {
+  return (
+    <div>
+      <Counter />
+    </div>
+  );
+}
+
+export default App;
+ -->
+
+
+
+----- Q2.What are the limitations of React?  -----
+
+ Ans:  Some limitations of React include:
+
+1. SEO Challenges: React's client-side rendering can be less SEO-friendly, as search engines may have difficulty indexing content on dynamically rendered pages.
+
+2. Learning Curve: React has a steep learning curve, especially for beginners, due to its complex concepts like JSX, hooks, and state management.
+
+3. Performance Issues: React's frequent re-rendering can lead to performance bottlenecks in large-scale applications if not optimized properly.
+
+4. Heavy Bundle Size: React applications can become bulky, leading to slower load times, unless optimized through code-splitting and lazy loading.
+
+5. JSX Syntax: JSX, while powerful, can be confusing for new developers since it mixes JavaScript and HTML-like syntax.
+
+6. Poor Documentation: React's rapidly evolving ecosystem sometimes leaves documentation and resources behind, making it harder for developers to find up-to-date information.
+
+
+
+-------Q3.What is useState() in React?----------
+
+
+Ans: useState() is a React hook that allows functional components to manage state. It returns an array with two elements:
+
+Current state value: The variable that holds the state.
+State updater function: A function to update the state.
+You initialize state by passing a default value to useState(), and the updater function can be used to modify the state.
+
+Example:
+
+const [count, setCount] = useState(0);
+Here, count is the state variable (initially set to 0), and setCount is the function used to update count.
+
+
+
+
+------Q4.What is JSX?-----------------------------------------------------
+
+Ans: JSX (JavaScript XML) is a syntax extension for JavaScript used in React.
+     It allows you to write HTML-like code within JavaScript, making it easier to create and structure UI components. 
+     JSX is then transpiled into JavaScript by tools like Babel.
+
+Example: 
+
+     const element = <h1>Hello, world!</h1>;
+     JSX makes React code more readable and intuitive, as it closely resembles HTML while allowing the power of JavaScript for dynamic behavior.
+
+
+
+
+-----Q5.What are the differences between functional and class components?---------------------------
+
+Ans: Functional Components:
+
+     Simpler and easier to write.
+     Are just JavaScript functions that accept props and return JSX.
+     Use hooks (like useState, useEffect) for managing state and side effects.
+     Do not have lifecycle methods (before hooks were introduced).
+
+Class Components:
+
+    More complex and require the class syntax.
+    Use this to access props, state, and methods.
+    Have built-in lifecycle methods (like componentDidMount, render).
+    Can manage state and handle side effects without hooks.
+    In short, functional components are simpler and modern, while class components are more feature-rich but less commonly used in newer React code.
+
+
+--------Q6.What is the use of useEffect React Hooks?-----------
+
+Ans: useEffect() is a React hook that allows you to perform side effects in functional components, such as fetching data, subscribing to events, or manually updating the DOM. 
+     It runs after the render and can be configured to run only when certain dependencies change.
+
+Example: 
+
+      useEffect(() => {
+      // Code to run after render (side effect)
+      }, [dependency]);
+
+    If no dependencies are passed, it runs after every render.
+    If an empty array [] is passed, it runs only once (like componentDidMount).
+    If dependencies are provided, it runs when any of them change.
+
+
+
+
+------Q7.What is the virtual DOM? How does react use the virtual DOM to render the UI?--------------------------------
+
+Ans: The Virtual DOM is an in-memory representation of the real DOM. It is a lightweight copy that React uses to efficiently update the UI.
+
+     Here's how React uses it:
+
+  1. Initial Render: React creates a Virtual DOM based on the component's JSX structure.
+  2. State Change: When the state or props change, React updates the Virtual DOM instead of directly changing the real DOM.
+  3. Reconciliation: React compares the updated Virtual DOM with the previous version (a process called "diffing").
+  4. Efficient Update: Only the differences (diffs) are then applied to the real DOM, minimizing unnecessary re-renders and improving performance.
+
+    This process makes React more efficient by reducing direct DOM manipulation, which can be slow.
